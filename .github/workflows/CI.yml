@@ -22,5 +22,11 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Clean with Maven
+      run: mvn clean 
+    - name: Compile with Maven
+      run: mvn compile 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn package 
+    - name: Test with Maven
+      run: mvn test 
